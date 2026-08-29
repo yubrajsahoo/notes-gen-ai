@@ -1,3 +1,35 @@
 :root {
-
+  /* Brand colors */
+  --primary: #6366f1; /* Main purple/indigo */
+  --primary-hover: #4f46e5;
+  --primary-light: #e0e7ff;
+  
+  /* Semantic colors */
+  --danger: #ef4444; /* Stop buttons, error text */
+  --success: #22c55e; /* Success checks, live status */
+  --warning: #f59e0b; /* Credits, stars */
+  
+  /* Background colors */
+  --bg-main: #f9fafb; /* App background */
+  --bg-surface: #ffffff; /* Card/panel background */
+  --bg-hover: #f3f4f6; /* Menu item hover */
+  
+  /* Text colors */
+  --text-primary: #111827; /* Headings, main text */
+  --text-secondary: #6b7280; /* Subtitles, meta text */
+  --text-disabled: #9ca3af;
+  
+  /* Borders */
+  --border-color: #e5e7eb; /* Dividers, card borders */
+  
+  /* Radii */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
