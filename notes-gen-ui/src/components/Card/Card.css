@@ -1,0 +1,69 @@
+.card {
+    width: fit-content;
+    max-width: 100%;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: var(--padding-0-5);
+    box-sizing: border-box;
+    background-color: var(--card-bg, var(--bg-surface));
+    color: var(--card-color, inherit);
+    border: 1px solid var(--card-border-color, var(--border-color));
+    border-radius: var(--radius-1);
+}
+
+/* Primary Variant */
+.card-primary {
+    --card-bg: var(--primary);
+    --card-color: var(--white);
+    --card-border-color: var(--primary);
+}
+
+/* Secondary Variant */
+.card-secondary {
+    --card-bg: var(--bg-hover);
+    --card-border-color: var(--border-color);
+}
+
+/* Outline Variant */
+.card-outline {
+    --card-bg: transparent;
+    --card-border-color: var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+.card-header{
+    width: 100%;
+    text-align: center;
+}
+.card-footer{
+    width: 100%;
+    text-align: center;
+}
+
+.card-icon{
+    padding: var(--padding-0-25);
+    margin-top: var(--margin-0-25);
+    background-color: var(--primary-light);
+    font-size: var(--font-1-5);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-size-3);
+    height: var(--icon-size-3);
+}
+
+.card-body, .card-title, .card-subtitle, .card-text {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}

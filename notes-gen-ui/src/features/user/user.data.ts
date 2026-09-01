@@ -6,5 +6,6 @@ import type {UserModel} from "./user.model.ts";
  * @author Yubraj Sahoo
  */
 export const CURRENT_USER: UserModel = {
+    greetings: "Good morning",
     name: 'Yubraj Sahoo'
 };

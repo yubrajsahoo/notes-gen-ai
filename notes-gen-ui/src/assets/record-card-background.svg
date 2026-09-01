@@ -1,0 +1,84 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none"
+xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5146E5"/>
+      <stop offset="0.48" stop-color="#4338CA"/>
+      <stop offset="1" stop-color="#6D5CE7"/>
+    </linearGradient>
+
+    <radialGradient id="glow1" cx="0" cy="0" r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(930 185) rotate(90) scale(230)">
+      <stop stop-color="#A78BFA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="0" cy="0" r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(280 80) rotate(90) scale(210)">
+      <stop stop-color="#818CF8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="wave" x1="0" y1="0" x2="1200" y2="0">
+      <stop stop-color="#C4B5FD" stop-opacity="0.20"/>
+      <stop offset="0.5" stop-color="#DDD6FE" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0.20"/>
+    </linearGradient>
+
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <clipPath id="card">
+      <rect width="1200" height="420" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <!-- Main background -->
+    <rect width="1200" height="420" fill="url(#bg)"/>
+
+    <!-- Soft atmospheric glows -->
+    <circle cx="930" cy="185" r="230" fill="url(#glow1)"/>
+    <circle cx="280" cy="80" r="210" fill="url(#glow2)"/>
+
+    <!-- Large translucent decorative circles -->
+    <circle cx="925" cy="195" r="165"
+      stroke="#C4B5FD" stroke-opacity="0.24" stroke-width="2"/>
+    <circle cx="925" cy="195" r="125"
+      stroke="#DDD6FE" stroke-opacity="0.18" stroke-width="2"/>
+    <circle cx="925" cy="195" r="88"
+      fill="#C4B5FD" fill-opacity="0.08"/>
+
+    <!-- Top-right soft shape -->
+    <path d="M970 -40C1010 75 1090 75 1240 65V-40H970Z"
+      fill="#A78BFA" fill-opacity="0.12"/>
+
+    <!-- Bottom translucent wave -->
+    <path d="M-50 405C150 280 300 475 535 405C750 340 800 285 1010 345C1110 374 1160 385 1250 300V470H-50V405Z"
+      fill="#C4B5FD" fill-opacity="0.13"/>
+
+    <!-- Flowing wave lines -->
+    <path d="M-40 342C155 470 315 430 465 352C615 274 730 305 850 345C1000 395 1100 350 1240 250"
+      stroke="url(#wave)" stroke-width="2.5" fill="none"/>
+
+    <path d="M-60 315C120 420 285 415 430 345C600 263 710 288 835 330C990 382 1105 345 1250 225"
+      stroke="#DDD6FE" stroke-opacity="0.13" stroke-width="1.5" fill="none"/>
+
+    <!-- Decorative dots -->
+    <circle cx="785" cy="75" r="9" fill="#BFDBFE" fill-opacity="0.55"/>
+    <circle cx="690" cy="335" r="10" fill="#A78BFA" fill-opacity="0.38"/>
+    <circle cx="1055" cy="105" r="7" fill="#DDD6FE" fill-opacity="0.35"/>
+    <circle cx="1125" cy="280" r="5" fill="#C4B5FD" fill-opacity="0.35"/>
+
+    <!-- Soft red accent from original design -->
+    <circle cx="1080" cy="82" r="25" fill="#FCA5A5" fill-opacity="0.14"/>
+    <circle cx="1080" cy="82" r="11" fill="#FB7185" fill-opacity="0.75"/>
+
+    <!-- Subtle edge highlight -->
+    <rect x="1" y="1" width="1198" height="418" rx="27"
+      stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+  </g>
+</svg>

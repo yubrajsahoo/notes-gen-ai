@@ -1,0 +1,36 @@
+.record-card {
+    background-image: url('../../assets/record-card-background.svg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--padding-1) var(--padding-4) var(--padding-1) var(--padding-1);
+}
+
+.record-card-subtitle {
+    width: 100%;
+    max-width: var(--width-20);
+    font-size: 0.875rem;
+    color: var(--primary-light);
+}
+
+.record-card-icon {
+    color: var(--primary);
+    background-color: var(--white);
+    align-self: flex-start;
+    margin-left: var(--margin-1);
+}
+
+.record-card-title {
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-1-5);
+    margin-bottom: var(--margin-0-25);
+}
+
+.record-card-text {
+    width: 100%;
+    margin-top: auto;
+    padding-top: var(--margin-1);
+}

@@ -1,0 +1,10 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-surface);
+    gap: var(--gap-1);
+    padding: var(--padding-1);
+    margin: var(--margin-0-25);
+    overflow-x: auto;
+    border-radius: var(--radius-0-5);
+}

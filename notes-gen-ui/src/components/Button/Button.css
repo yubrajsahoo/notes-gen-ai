@@ -1,0 +1,90 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-0-5) var(--padding-1);
+    border-radius: var(--radius-0-5);
+    font-weight: var(--font-weight-500);
+    cursor: pointer;
+    border: 1px solid var(--btn-border-color, transparent);
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    max-width: 100%;
+
+    /* Default Properties (Primary Variant uses global vars directly) */
+    background-color: var(--btn-bg, var(--primary));
+    color: var(--btn-color, var(--white));
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--btn-hover-bg, var(--primary-hover));
+    color: var(--btn-hover-color, var(--white));
+}
+
+.btn:active:not(:disabled) {
+    background-color: var(--btn-active-bg, #4338ca);
+    color: var(--btn-active-color, var(--white));
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Secondary Variant */
+.btn-secondary {
+    --btn-bg: var(--bg-hover);
+    --btn-color: var(--text-primary);
+    --btn-hover-bg: var(--border-color);
+    --btn-hover-color: var(--text-primary);
+    --btn-active-bg: #d1d5db;
+    --btn-active-color: var(--text-primary);
+}
+
+/* Outline Variant */
+.btn-outline {
+    --btn-bg: transparent;
+    --btn-color: var(--primary);
+    --btn-border-color: var(--primary);
+    --btn-hover-bg: var(--primary-light);
+    --btn-hover-color: var(--primary);
+    --btn-active-bg: #c7d2fe;
+    --btn-active-color: var(--primary);
+}
+
+/* Ghost Variant */
+.btn-ghost {
+    --btn-bg: transparent;
+    --btn-color: var(--text-primary);
+    --btn-hover-bg: var(--bg-hover);
+    --btn-hover-color: var(--text-primary);
+    --btn-active-bg: var(--border-color);
+    --btn-active-color: var(--text-primary);
+}
+
+/* Danger Variant */
+.btn-danger {
+    --btn-bg: var(--danger);
+    --btn-color: var(--white);
+    --btn-hover-bg: #dc2626;
+    --btn-hover-color: var(--white);
+    --btn-active-bg: #b91c1c;
+    --btn-active-color: var(--white);
+}
+
+/* Inverted Variant (White button with primary text) */
+.btn-inverted {
+    --btn-bg: var(--white);
+    --btn-color: var(--primary);
+    --btn-hover-bg: var(--bg-hover);
+    --btn-hover-color: var(--primary-hover);
+    --btn-active-bg: #e5e7eb;
+    --btn-active-color: var(--primary-hover);
+}

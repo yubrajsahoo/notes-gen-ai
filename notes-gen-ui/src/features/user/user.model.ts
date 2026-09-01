@@ -4,5 +4,6 @@
  * @author Yubraj Sahoo
  */
 export interface UserModel {
+    greetings: string;
     name: string;
 }
