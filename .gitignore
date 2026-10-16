@@ -1,0 +1,18 @@
+# Root gitignore for Notes-Gen-AI multi-repo / monorepo
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual Environments
+venv/
+.venv/
+
+# Environment Variables
+.env
+/docker-compose.yaml

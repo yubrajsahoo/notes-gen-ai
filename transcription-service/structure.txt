@@ -1,0 +1,55 @@
+E:\GitWork\notes-gen-ai\transcription-service\
+│
+├── app/                              # Core application package
+│   ├── __init__.py                   # Marks 'app' as a Python package
+│   │
+│   ├── core/                         # Configuration & startup settings
+│   │   ├── __init__.py
+│   │   ├── config.py                 # Loads .env / GitHub Secrets (Port 8082, Whisper & RabbitMQ config)
+│   │   └── logging_config.py         # Structured logging setup
+│   │
+│   ├── api/                          # HTTP & WebSocket route controllers
+│   │   ├── __init__.py
+│   │   ├── health.py                 # GET /health endpoint
+│   │   └── websocket_routes.py       # WS /ws/transcribe endpoint (handles live audio/video chunks)
+│   │
+│   ├── services/                     # Core business & media processing logic
+│   │   ├── __init__.py
+│   │   ├── audio_processor.py        # FFmpeg pipeline (strips video frames & normalizes to 16kHz PCM)
+│   │   ├── transcriber.py            # Faster-Whisper model loader & speech-to-text inference
+│   │   └── storage_service.py        # (Optional) Saves raw media to MinIO/S3 or metadata to PostgreSQL/MongoDB
+│   │
+│   ├── messaging/                    # Asynchronous RabbitMQ integration
+│   │   ├── __init__.py
+│   │   └── rabbitmq_publisher.py     # Publishes 'TranscriptionCompleted' event to RabbitMQ (Port 5672)
+│   │
+│   └── schemas/                      # Pydantic models & payload validation
+│       ├── __init__.py
+│       └── transcription_schema.py   # WebSocket message schemas & RabbitMQ event payload models
+│
+├── tests/                            # Unit & integration tests
+│   ├── __init__.py
+│   ├── test_health.py                # Tests GET /health endpoint
+│   └── test_websocket.py             # Tests WebSocket /ws/transcribe streaming
+│
+├── k8s/                              # Kubernetes deployment manifests (Phase 5)
+│   ├── deployment.yaml
+│   └── service.yaml
+│
+├── .github/                          # GitHub Actions CI/CD workflows
+│   └── workflows/
+│       └── deploy.yml                # Reads GitHub Secrets, runs tests, and builds/deploys Docker image
+│
+├── venv/                             # Isolated Python Virtual Environment (ignored by Git)
+├── main.py                           # FastAPI application entry point (initializes app, CORS & routers)
+├── build.bat                         # Automated build & quality check script (runs all 10 checks)
+├── requirements.txt                  # Python runtime dependencies (fastapi, uvicorn, faster-whisper, etc.)
+├── requirements-dev.txt              # Dev dependencies for code quality (ruff, flake8, black, isort, mypy) & coverage (pytest-cov)
+├── pyproject.toml                    # Pytest, coverage, ruff, black, isort, mypy & bandit configuration
+├── .flake8                           # Flake8 linter configuration
+├── .env                              # Local environment variables (ignored by Git)
+├── .env.example                      # Template showing required environment variables
+├── .gitignore                        # Excludes venv/, .env, __pycache__/ from Git
+├── Dockerfile                        # Builds Python + FFmpeg container image
+├── docker-compose.yml                # Runs transcription-service (8082) + RabbitMQ (5672) locally
+└── README.md                         # Project documentation & commands reference

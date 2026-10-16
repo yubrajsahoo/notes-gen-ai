@@ -1,0 +1,28 @@
+# Git & IDEs
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Python Virtual Environments & Caches
+venv/
+env/
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & Coverage Artifacts
+test/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage_html/
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Temporary & Log files
+*.tmp
+*.log
+temp_audio/
