@@ -147,7 +147,7 @@ pytest
 ### View HTML Coverage Report
 After running pytest, open the generated HTML report:
 * **Windows (PowerShell):**
-  ```powershell
+  ```bash
   Start-Process htmlcov/index.html
   ```
 * **macOS:**
@@ -198,13 +198,19 @@ Scan source code and prepare the mutation jobs database:
 cosmic-ray init cosmic_ray.toml session.sqlite --force
 ```
 
-#### 3. Execute Mutation Testing
+#### 3. Apply Pragma Filters
+Skip boilerplate entrypoint lines annotated with `# pragma: no mutate`:
+```bash
+cr-filter-pragma session.sqlite
+```
+
+#### 4. Execute Mutation Testing
 Run tests against all generated mutants:
 ```bash
 cosmic-ray exec cosmic_ray.toml session.sqlite
 ```
 
-#### 4. View Mutation Reports
+#### 5. View Mutation Reports
 
 * **Terminal Summary Report:**
   ```bash
@@ -227,7 +233,7 @@ cosmic-ray exec cosmic_ray.toml session.sqlite
   cr-html session.sqlite > mutation_report.html
   ```
   Open `mutation_report.html` in your web browser:
-  ```powershell
+  ```bash
   Start-Process mutation_report.html    # Windows PowerShell
   open mutation_report.html             # macOS
   xdg-open mutation_report.html         # Linux
