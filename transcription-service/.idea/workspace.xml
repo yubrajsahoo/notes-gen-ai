@@ -1,4 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7218ca30-4c2d-4938-ba00-1c466966e261" name="Changes" comment="&quot;features/transcription: initialize transcription-service project structure with essential files&quot;">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/common/health.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/transcription_service/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="7" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.9357074095073235" />
+      <entry key="MS500" value="2.662096933162169" />
+      <entry key="S2" value="2.9068722197352197" />
+      <entry key="S5" value="3.034008729196803" />
+      <entry key="S10" value="3.3618117711441453" />
+      <entry key="S30" value="4.421400424813907" />
+      <entry key="S60" value="5.967905880068834" />
+      <entry key="M2" value="8.800766452557852" />
+      <entry key="M5" value="15.71936561057518" />
+      <entry key="M10" value="26.926588526569986" />
+      <entry key="M15" value="36.20042756556605" />
+      <entry key="M30" value="52.80561608939763" />
+      <entry key="H1" value="65.88969990913675" />
+      <entry key="H2" value="74.2000785225804" />
+      <entry key="H4" value="78.89680954992248" />
+      <entry key="D1" value="83.1196629216159" />
+      <entry key="W1" value="83.87348608050895" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.4943389529233437E-269" />
+      <entry key="MS500" value="1.9027910227951E-54" />
+      <entry key="S2" value="3.7140502339899816E-14" />
+      <entry key="S5" value="4.245600339784583E-6" />
+      <entry key="S10" value="0.0020604854621628817" />
+      <entry key="S30" value="0.12724964051676768" />
+      <entry key="S60" value="0.35701016779535844" />
+      <entry key="M2" value="0.6417517358461714" />
+      <entry key="M5" value="1.9092536736783767" />
+      <entry key="M10" value="4.73690656804865" />
+      <entry key="M15" value="7.0410008231666" />
+      <entry key="M30" value="10.991201353143378" />
+      <entry key="H1" value="13.983523343831381" />
+      <entry key="H2" value="15.842336220763135" />
+      <entry key="H4" value="16.88072033947462" />
+      <entry key="D1" value="17.80755115781027" />
+      <entry key="W1" value="17.972358894885527" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.055465225300706" />
+      <entry key="MS500" value="1.969071678137848" />
+      <entry key="S2" value="2.637516364966537" />
+      <entry key="S5" value="2.9021046293220825" />
+      <entry key="S10" value="3.266768443925862" />
+      <entry key="S30" value="4.489058321897646" />
+      <entry key="S60" value="6.286576677694235" />
+      <entry key="M2" value="9.418672811224468" />
+      <entry key="M5" value="17.61083249994158" />
+      <entry key="M10" value="31.64557790916962" />
+      <entry key="M15" value="43.224684864271424" />
+      <entry key="M30" value="63.78441440509085" />
+      <entry key="H1" value="79.86552105440155" />
+      <entry key="H2" value="90.03810204477911" />
+      <entry key="H4" value="95.77524526620476" />
+      <entry key="D1" value="100.92681428788083" />
+      <entry key="W1" value="101.84578737996065" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3Lp6IQ30PPlC4asWAMzCpUOCj1D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "features/transcription",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="transcription-service" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/transcription_service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/transcription_service/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-245168a56dbd-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.25134.203" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7218ca30-4c2d-4938-ba00-1c466966e261" name="Changes" comment="" />
+      <created>1794138584733</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794138584733</updated>
+    </task>
+    <task id="LOCAL-00001" summary="&quot;features/transcription: initialize transcription-service project structure with essential files&quot;">
+      <option name="closed" value="true" />
+      <created>1794138795311</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1794138795312</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;features/transcription: initialize transcription-service project structure with essential files&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;features/transcription: initialize transcription-service project structure with essential files&quot;" />
+  </component>
 </project>

@@ -1,1 +1,3 @@
 /transcription-service/.venv/
+/transcription-service/.pytest_cache/
+/transcription-service/.coverage

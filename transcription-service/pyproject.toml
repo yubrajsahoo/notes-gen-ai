@@ -8,7 +8,9 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "uvicorn>=0.54.0",
     "fastapi[standard]>=0.162.2",
+    "pydantic-settings>=2.16.2",
 ]
 
 [project.scripts]
@@ -17,3 +19,24 @@ transcription-service = "transcription_service:main"
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+# Set the maximum line length (88 is standard in modern Python)
+line-length = 88
+# Tell Ruff we are using Python 3.10 or newer
+target-version = "py310"
+
+[tool.ruff.lint]
+# Enable standard error checks (E) and standard formatting (F), plus imports sorting (I)
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=transcription_service --cov-report=term-missing --cov-report=html --cov-fail-under=80"
+testpaths = ["tests"]
