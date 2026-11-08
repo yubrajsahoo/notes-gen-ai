@@ -1,3 +1,5 @@
+from typing import Any
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -13,9 +15,11 @@ class Settings(BaseSettings):
     # to override the defaults above
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
-    @property
-    def cors_origins(self) -> list[str]:
-        return self.CORS_ORIGINS
+    def __getattr__(self, item: str) -> Any:
+        upper_item = item.upper()
+        if upper_item in type(self).model_fields:
+            return getattr(self, upper_item)
+        return super().__getattr__(item)
 
 
 settings = Settings()

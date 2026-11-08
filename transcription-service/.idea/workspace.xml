@@ -5,20 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7218ca30-4c2d-4938-ba00-1c466966e261" name="Changes" comment="&quot;features/transcription: initialize transcription-service project structure with essential files&quot;">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/core/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/common/health.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transcription_service/routes/v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/transcription_service/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/core/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/core/middle_ware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transcription_service/service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/core/test_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/core/test_logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/core/test_middle_ware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/routes/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/routes/common/test_health.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/routes/test_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/transcription_service/test_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transcription_service/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/transcription_service/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transcription_service/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/transcription_service/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transcription_service/routes/common/health.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/transcription_service/routes/common/health.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transcription_service/routes/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/transcription_service/routes/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/transcription_service/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,32 +105,32 @@
       <entry key="W1" value="101.84578737996065" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3Lp6IQ30PPlC4asWAMzCpUOCj1D" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "features/transcription",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;features/transcription&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="transcription-service" />
